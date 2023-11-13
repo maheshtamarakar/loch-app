@@ -1,0 +1,62 @@
+
+.watch_whale__section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+.whale_left {
+    width: 342px;
+    height: 342px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whale_right {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    text-align: end;
+    padding: 3rem;
+}
+
+.whale_right > img {
+    width: 32px;
+}
+
+.whale_right > h3 {
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 37.2px */
+    color: #F2F2F2;
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+.whale_right > p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 19.2px */
+    color: var(--Background---F2F2F2, #F2F2F2);
+    opacity: 0.7;
+}
+
+
+@media only screen and (max-width: 890px) {
+    .whale_right {
+        margin: 2rem 2rem;
+        width: 100%;
+        padding: 0;
+    }
+    .watch_whale__section {
+        justify-content: center;
+    }
+    .whale_left{
+        padding-right: 5px;
+    }
+
+  }

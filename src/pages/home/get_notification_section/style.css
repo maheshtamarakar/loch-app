@@ -1,0 +1,113 @@
+
+.notification__section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.notification__left {
+    display: flex;
+    flex-direction: column;
+    width: 21rem;
+    margin: 0 2rem;
+}
+
+.notification__left > img {
+    /* color: red; */
+    /* background: green; */
+    width: 32px;
+}
+
+.notification__left > h3 {
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 37.2px */
+    color: #F2F2F2;
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+.notification__left > p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 19.2px */
+    color: var(--Background---F2F2F2, #F2F2F2);
+    opacity: 0.7;
+}
+
+.notification__right {
+    /* flex: 1; */
+    display: flex;
+    gap: 18px;
+    padding-left: 3rem;
+}
+
+.notification__right {
+    height: 250px;
+    margin: 2rem auto;
+    position: relative;
+    width: 53%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.notification_track {
+    display: flex;
+    width: calc(250px * 8); /* multiply with number of notification cards */
+    animation: scroll 40s linear infinite;
+}
+
+.notification_track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 4)); /* multiply by half of images number */    }
+}
+
+.notification {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+.notification__right::before,
+.notification__right::after {
+    background: linear-gradient(to right, rgb(0 0 0 / 55%) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.notification__right::before {
+    left: 0;
+    top: 0;
+}
+
+.notification__right::after {
+    right:0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+@media only screen and (max-width: 890px) {
+    .notification__right {
+        margin: 2rem 2rem;
+        width: 100%;
+    }
+  }
+
+

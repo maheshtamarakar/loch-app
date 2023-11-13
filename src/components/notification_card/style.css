@@ -1,0 +1,62 @@
+.notification_card {
+  width: 189.7px;
+  height: 171.5px;
+  border-radius: 8.4px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 27.5%,
+      rgba(22, 93, 255, 0.16) 157.71%
+    ),
+    #fff;
+  box-shadow: 0px 0.7px 0.7px 0px rgba(0, 0, 0, 0.04),
+    0px 2.8px 7px 0px rgba(0, 0, 0, 0.04);
+    padding: 1rem;
+}
+
+.notification_card {
+  transition: transform 0.2s;
+}
+
+.notification_card:hover {
+  transform: translateZ(10px);
+}
+
+
+.notifiation__bell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification__content {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--grey-900, #19191a);
+  width: 129px;
+  margin: 1rem 0;
+}
+
+.notification__gmail {
+  display: flex;
+  width: 161.7px;
+  height: 35px;
+  padding: 8.4px 11.2px;
+  align-items: center;
+  gap: 7px;
+  border-radius: 5.6px;
+  border: 0.7px solid var(--neutral-300, #d4d4d4);
+  background: #fff;
+}
+
+.wallet_btn {
+  border-radius: 4.8px;
+  background: var(--grey-50, rgba(229, 229, 230, 0.50));
+  display: inline-flex;
+  padding: 6.2px 10px;
+  align-items: center;
+  gap: 2.8px;
+  border: none;
+  justify-content: center;
+}
