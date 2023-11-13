@@ -1,13 +1,13 @@
 import React from 'react'
 import './style.css'
 
-const TestimonialCard = () => {
+const TestimonialCard = ({data}) => {
   return (
     <div className='testimonial_card'>
       <div className="testimonial__header">
-      Jack F <span>Ex Blackrock PM</span>
+      {data?.name} <span>{data?.position}</span>
       </div>
-      <p>“Love how Loch integrates portfolio analytics and whale watching into one unified app.”</p>
+      <p>“{data?.content}</p>
     </div>
   )
 }

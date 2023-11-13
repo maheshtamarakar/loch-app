@@ -1,13 +1,66 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './style.css'
 import TestimonialCard from '../../../components/testimonials_card/TestimonialCard'
 import logo from '../../../assets/logo.svg'
 
 const Testimonials = () => {
+  const [testimonialsData, setTestimonialsData] = useState([])
   const slider = useRef(null);
   const [isDown, setIsDown] = useState(false)
   const [startX, setStartX] = useState(0)
   const [scrollLeft, setScrollLeft] = useState(0)
+  useEffect(() => {
+    setTestimonialsData([
+      {
+        id: 1,
+        name: 'Jack F',
+        position: 'Ex Blackrock PM',
+        content: '“Love how Loch integrates portfolio analytics and whale watching into one unified app.”'
+      },
+      {
+        id: 2,
+        name: 'Yash P',
+        position: 'Research, 3poch Crypto Hedge Fund',
+        content: '“I use Loch everyday now. I dont think I could analyze crypto whale trends markets without it. Im addicted!”'
+      },
+      {
+        id: 3,
+        name: 'Jack F',
+        position: 'Ex Blackrock PM',
+        content: '“Love how Loch integrates portfolio analytics and whale watching into one unified app.”'
+      },
+      {
+        id: 4,
+        name: 'Yash P',
+        position: 'Research, 3poch Crypto Hedge Fund',
+        content: '“I use Loch everyday now. I dont think I could analyze crypto whale trends markets without it. Im addicted!”'
+      },
+      {
+        id: 5,
+        name: 'Jack F',
+        position: 'Ex Blackrock PM',
+        content: '“Love how Loch integrates portfolio analytics and whale watching into one unified app.”'
+      },
+      {
+        id: 6,
+        name: 'Yash P',
+        position: 'Research, 3poch Crypto Hedge Fund',
+        content: '“I use Loch everyday now. I dont think I could analyze crypto whale trends markets without it. Im addicted!”'
+      },
+      {
+        id: 7,
+        name: 'Jack F',
+        position: 'Ex Blackrock PM',
+        content: '“Love how Loch integrates portfolio analytics and whale watching into one unified app.”'
+      },
+      {
+        id: 8,
+        name: 'Yash P',
+        position: 'Research, 3poch Crypto Hedge Fund',
+        content: '“I use Loch everyday now. I dont think I could analyze crypto whale trends markets without it. Im addicted!”'
+      },
+    ])
+  }, [])
   const handleMouseDown = (e) => {
     setIsDown(true);
     let startXvalue = e.pageX - slider.current.offsetLeft;// margin value
@@ -46,10 +99,11 @@ const Testimonials = () => {
           onMouseMove={handleMouseMove}
           ref={slider}
           >
-        <TestimonialCard/>
-        <TestimonialCard/>
-        <TestimonialCard/>
-        <TestimonialCard/>
+            {testimonialsData.length > 0 && 
+            testimonialsData?.map((data) => (
+              <TestimonialCard data={data}/>
+            ))
+            }
         </div>
       </div>
     </div>
