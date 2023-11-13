@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import bell from "../../../assets/bell.svg";
+import bell from "../../../assets/bell2.svg";
+import bar_chart from "../../../assets/bar-chart.svg";
+import clock from "../../../assets/clock.svg";
 import NotificationCard from "../../../components/notification_card/NotificationCard";
 
 const NotificationSection = (e) => {
@@ -10,46 +12,58 @@ const NotificationSection = (e) => {
       {
        type: 'email',
        content: 'We’ll be sending notifications to you here',
-       email: 'hello@gmail.com'
-
+       more_content: null,
+       email: 'hello@gmail.com',
+       wallet:null,
+       time: null,
+       img: bell
       },
       {
        type: 'wallet',
        content: 'Notify me when any wallets move more than',
-       wallet: 1000.00
+       more_content: null,
+       email: null,
+       wallet: 1000.00,
+       time: null,
+       img: bar_chart
+      },
+      {
+       type: 'time',
+       content: 'Notify me when any wallet dormant for',
+       more_content: 'becomes active',
+       email: null,
+       wallet: null,
+       time: 30,
+       img: clock
+
       },
       {
        type: 'email',
        content: 'We’ll be sending notifications to you here',
-       email: 'hello@gmail.com'
-
+       more_content: null,
+       email: 'hello@gmail.com',
+       wallet:null,
+       time: null,
+       img: bell
       },
       {
        type: 'wallet',
        content: 'Notify me when any wallets move more than',
-       wallet: 1000.00
+       more_content: null,
+       email: null,
+       wallet: 1000.00,
+       time: null,
+       img: bar_chart
       },
       {
-       type: 'email',
-       content: 'We’ll be sending notifications to you here',
-       email: 'hello@gmail.com'
+       type: 'time',
+       content: 'Notify me when any wallet dormant for',
+       more_content: 'becomes active',
+       email: null,
+       wallet: null,
+       time: 30,
+       img: clock
 
-      },
-      {
-       type: 'wallet',
-       content: 'Notify me when any wallets move more than',
-       wallet: 1000.00
-      },
-      {
-       type: 'email',
-       content: 'We’ll be sending notifications to you here',
-       email: 'hello@gmail.com'
-
-      },
-      {
-       type: 'wallet',
-       content: 'Notify me when any wallets move more than',
-       wallet: 1000.00
       },
     ])
   }, [])
